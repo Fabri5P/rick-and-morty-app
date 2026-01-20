@@ -1,0 +1,352 @@
+/* Search and Navigation Container */
+.search-nav-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 152, 0, 0.2);
+}
+
+body.light-mode .search-nav-container {
+  background: rgba(255, 152, 0, 0.08);
+}
+
+/* Search Container (Left) */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-input {
+  background-color: #1a1a1a !important;
+  border: 2px solid #ff9800 !important;
+  color: #fff !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .search-input {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.search-input::placeholder {
+  color: #999 !important;
+}
+
+.search-input:focus {
+  border-color: #ffb74d !important;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.4) !important;
+  outline: none !important;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-search,
+.btn-clear {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-search {
+  background-color: #ff9800;
+  color: #000;
+}
+
+.btn-search:hover {
+  background-color: #ffb74d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+.btn-clear {
+  background-color: #666;
+  color: #fff;
+}
+
+.btn-clear:hover {
+  background-color: #888;
+  transform: translateY(-2px);
+}
+
+/* Direct Page Navigation (Right) */
+.direct-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.page-label {
+  font-weight: bold;
+  color: #ff9800;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+body.light-mode .page-label {
+  color: #ff9800;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.page-input {
+  background-color: #1a1a1a !important;
+  border: 2px solid #ff9800 !important;
+  color: #fff !important;
+  padding: 0.6rem !important;
+  border-radius: 6px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+  max-width: 100px;
+}
+
+body.light-mode .page-input {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.page-input:focus {
+  border-color: #ffb74d !important;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.4) !important;
+  outline: none !important;
+}
+
+.page-total {
+  color: #999;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+body.light-mode .page-total {
+  color: #666;
+}
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+  align-items: center;
+}
+
+/* Pagination Controls */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 152, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 152, 0, 0.2);
+  width: 100%;
+}
+
+body.light-mode .pagination-controls {
+  background: rgba(255, 152, 0, 0.08);
+}
+
+/* Navigation Buttons */
+.btn-nav {
+  padding: 0.7rem 1.2rem;
+  background-color: #ff9800;
+  color: #000;
+  border: 2px solid #ff9800;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 130px;
+}
+
+.btn-nav:hover:not(:disabled) {
+  background-color: #ffb74d;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #666;
+  border-color: #666;
+}
+
+/* Numeric Pagination Buttons */
+.pagination-numbers {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+
+.btn-page {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 2px solid #ff9800;
+  background-color: transparent;
+  color: #ff9800;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light-mode .btn-page {
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+.btn-page:hover:not(.disabled) {
+  background-color: #ff9800;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.btn-page.active {
+  background-color: #ff9800;
+  color: #000;
+  box-shadow: 0 0 12px rgba(255, 152, 0, 0.5);
+}
+
+.btn-page:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Range Indicator */
+.page-range-indicator {
+  color: #999;
+  padding: 0 0.3rem;
+  font-weight: bold;
+}
+
+/* Page Info Detail */
+.page-info-detail {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #ff9800;
+  font-size: 0.95rem;
+}
+
+body.light-mode .page-info-detail {
+  color: #ff9800;
+}
+
+.separator {
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .search-nav-container {
+    padding: 1rem;
+  }
+
+  .pagination-numbers {
+    min-width: 250px;
+  }
+
+  .btn-page {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-nav-container .row {
+    row-gap: 1rem;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pagination-numbers {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .btn-nav {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .page-input {
+    max-width: 80px !important;
+  }
+
+  .direct-page-container {
+    width: 100%;
+  }
+
+  .btn-page {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .page-range-indicator {
+    display: none;
+  }
+
+  .page-info-detail {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination-numbers {
+    gap: 0.2rem;
+  }
+
+  .btn-page {
+    width: 28px;
+    height: 28px;
+    font-size: 0.65rem;
+  }
+
+  .pagination-controls {
+    padding: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn-search,
+  .btn-clear {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
